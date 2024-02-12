@@ -1,5 +1,18 @@
+// Obtener el formulario por su id
+var formulario = document.getElementById('myForm');
 
-function submitForm() {
+// Función para manejar el evento de envío del formulario
+formulario.addEventListener('submit', function(evento) {
+
+// Evitar la recarga de la página
+// evento.preventDefault();
+
+// Aquí puedes manejar los datos del formulario
+// Limpiar el formulario
+// formulario.reset();
+
+
+ 
 
     var inputVal = document.getElementById("fname").value;
     var cadenaSinEspacios = inputVal.trim();
@@ -13,17 +26,18 @@ function submitForm() {
         nuevaImagen.setAttribute("id","miImagen")
         nuevaImagen.setAttribute("data-value", inputVal);
         nuevaImagen.setAttribute("data-text", inputVal);
-        nuevaImagen.style.width = '80%';
+        nuevaImagen.style.width = '90%';
 
         var divImagen = document.getElementById('imagen');
         divImagen.appendChild(nuevaImagen);
         JsBarcode("#miImagen").init();
     }
+   
+}
 
-}
-function limpiar() {
-    location.reload();
-}
+);
+
+
 
 
 
