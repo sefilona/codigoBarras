@@ -1,22 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
 .row {
-    background-color: orange;
-    border: 3px solid rgb(110, 73, 5);
-    padding: 3em;
-    margin: 3em;
+    /* background-color: rgb(17, 255, 0); */
+    border: 1px solid rgb(235, 87, 191);
+    padding: 0.5em;
+    margin: 0.5em;
+}
+.row h1 {
+    color:red;
+    font-size: 1.25em;
+    
+}
+.row .col .formulario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
 }
-.col {
-    background-color: orange;
-    font-size: medium;
-    border: 3px solid rgb(110, 73, 5);
-}
+
+
+
  
 img {
-    margin: 1em;
+    margin: 0.5em;
 }
 form {
-    margin: 1em;
+    margin: 0.5em;
 }
-input {
-    margin: 1em;
-} 

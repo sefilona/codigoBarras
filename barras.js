@@ -2,12 +2,35 @@
 
 function submitForm() {
     var inputVal = document.getElementById("fname").value;
-    var imagen = document.getElementById("miImagen");
-    imagen.setAttribute("data-value", inputVal);
-    imagen.setAttribute("data-text", inputVal);
+    var cadenaSinEspacios = inputVal.trim();
+    console.log(cadenaSinEspacios);
 
-    JsBarcode(".codigo").init();
+    var cadenaLimpia = cadenaSinEspacios.replace(/\s+/g, '');
+    console.log(cadenaLimpia);
+
+    const grupos = cadenaLimpia.match(/.{1,9}/g);
+
+    console.log(grupos);
+
+    for (let i = 0; i < grupos.length; i++) {
+        inputVal = grupos[i];
+        console.log(inputVal)
+
+        const nuevaImagen = document.createElement('img');
+        nuevaImagen.setAttribute("id","miImagen")
+        nuevaImagen.setAttribute("data-value", inputVal);
+        nuevaImagen.setAttribute("data-text", inputVal);
+        document.body.appendChild(nuevaImagen);
+        JsBarcode("#miImagen").init();
 
 }
+}
+
+
+    
+
+
+
+
 
 
