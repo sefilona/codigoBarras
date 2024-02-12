@@ -20,7 +20,11 @@ function submitForm() {
         nuevaImagen.setAttribute("id","miImagen")
         nuevaImagen.setAttribute("data-value", inputVal);
         nuevaImagen.setAttribute("data-text", inputVal);
-        document.body.appendChild(nuevaImagen);
+        nuevaImagen.style.width = '90%';
+
+        var divImagen = document.getElementById('imagen');
+
+        divImagen.appendChild(nuevaImagen);
         JsBarcode("#miImagen").init();
 
 }

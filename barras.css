@@ -17,15 +17,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
 }
 
-
-
- 
-img {
-    margin: 0.5em;
-}
 form {
     margin: 0.5em;
 }
